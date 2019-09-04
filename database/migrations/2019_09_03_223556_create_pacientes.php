@@ -16,10 +16,13 @@ class CreatePacientes extends Migration
         Schema::create('Pacientes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->unsignedBigInteger("id_obra_social")
-                    ->reference('id')
+            $table->unsignedBigInteger("id_obra_social");
+            
+            $table->foreign('id_obra_social')
+                    ->references('id')
                     ->on('obrasSociales')
                     ->onDelete('cascade');
+
             $table->timestamps();
         });
     }

@@ -15,11 +15,14 @@ class CreateMedicos extends Migration
     {
         Schema::create('Medicos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->strin('name');
-            $table->unsignedBigInteger('id_especialidades')
-                    ->reference('id')
+            $table->string('name');
+            $table->unsignedBigInteger('id_especialidades');
+            
+            $table->foreign('id_especialidades')
+                    ->references('id')
                     ->on('Especialidades')
                     ->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
