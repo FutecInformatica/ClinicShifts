@@ -20,3 +20,27 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('users','UsersController');
     
 });
+
+Route::group(['prefix' => 'especialidades'], function(){
+    
+    Route::resource('especialidades','EspecialidadesController');
+    
+});
+
+Route::group(['prefix' => 'os'], function(){
+    
+    Route::resource('os','OSController');
+    
+});
+
+Route::group(['prefix' => 'pacientes'], function(){
+    
+    Route::resource('pacientes','PacientesController');
+    
+});
+
+Route::group(['prefix' => 'medicos'], function(){
+    
+    Route::resource('medicos','MedicosController');
+    
+});

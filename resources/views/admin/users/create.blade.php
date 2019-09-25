@@ -1,5 +1,16 @@
+@extends('admin.templates.main')
 
+@section('title', 'Nuevo Usuario')
 
+@section('content')
+
+<h1>Nuevo Usuario</h1><hr>
+<br>
+<h2>Ingrese los datos para registrar el Nuevo Usuario</h2>
+<div class="container">
+    <div class="row">   
+        <div class="col"></div>
+        <div class="col-6">
     {!! Form::open(['route' => 'users.store', 'method' => 'POST']) !!}
     
     <div class="form-group">
@@ -11,7 +22,7 @@
     <div class="form-group">
         {!! Form::label('password', 'Password: ') !!}
         {!! Form::password('password', [
-            'class' => 'form-control', 'required'
+            'class' => 'form-control', 'placeholder' => '********', 'required'
             ]) !!}
     </div>
     <div class="form-group">
@@ -46,4 +57,8 @@
         
     
     {!! Form::close() !!}
-
+    </div>
+        <div class="col"></div>
+    </div> 
+</div>
+@endsection
