@@ -3,7 +3,7 @@
 @section('title', 'Lista de Usuarios')
 
 @section('content')
-<a href="{{ route('users.create') }}" class="btn btn-info">Resitrar Nuevo Usuario</a><hr>
+<a href="{{ route('users.create') }}" class="btn btn-info">Registrar Nuevo Usuario</a><hr>
 <table class="table table-striped">
     <thead>
         <th>ID</th>
@@ -31,7 +31,11 @@
                 @endif
             </td>
             <td>{{ $user->updated_at }}</td>
-            <td><a href="" class="btn btn-warning">Editar</a><a href="" class="btn btn-danger">Eliminar</a></td>
+            <td><a href="{{ route('users.edit', $user->id) }}" 
+                   class="btn btn-warning">Editar</a>
+                <a href="{{ route('users.destroy', $user->id) }}" 
+                   onclick="return confirm('Seguro que deseas eliminar el Usuario?')"
+                   class="btn btn-danger">Eliminar</a></td>
         </tr>
         @endforeach
     </tbody>
