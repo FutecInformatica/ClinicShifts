@@ -3,6 +3,10 @@
 @section('title', 'Lista de Usuarios')
 
 @section('content')
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-12">
 <a href="{{ route('users.create') }}" class="btn btn-info">Registrar Nuevo Usuario</a><hr>
 <table class="table table-striped">
     <thead>
@@ -32,6 +36,7 @@
             </td>
             <td>{{ $user->updated_at }}</td>
             <td><a href="{{ route('users.edit', $user->id) }}" 
+                   onclick="return confirm('Seguro que deseas editar el Usuario?')"
                    class="btn btn-warning">Editar</a>
                 <a href="{{ route('users.destroy', $user->id) }}" 
                    onclick="return confirm('Seguro que deseas eliminar el Usuario?')"
@@ -40,5 +45,8 @@
         @endforeach
     </tbody>
 </table>
-
+</div>
+        <div class="col"></div>
+</div>
+</div>
 @endsection

@@ -4,9 +4,16 @@
 
 @section('content')
 
-<h1>Editar Usuario</h1><hr>
-<br>
-<h2>Ingrese los datos para registrar el Nuevo Usuario</h2>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-12">
+            <h2>Editar Usuario "{{ $user->first_name }} {{ $user->last_name }}"</h2><hr>
+            <br>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
 <div class="container">
     <div class="row">   
         <div class="col"></div>

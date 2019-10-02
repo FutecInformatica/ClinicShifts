@@ -18,6 +18,22 @@ class CreateEspecialidades extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        
+        Schema::create('especialidad_medico', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('medico_id');
+            $table->unsignedBigInteger('especialidad_id');
+            
+            $table->foreign('medico_id')
+                ->references('id')
+                ->on('Medicos');
+            
+            $table->foreign('especialidad_id')
+                ->references('id')
+                ->on('Especialidades');
+            
+            $table->timestamps();
+        });
     }
 
     /**

@@ -3,10 +3,17 @@
 @section('title', 'Nuevo Usuario')
 
 @section('content')
-
-<h1>Nuevo Usuario</h1><hr>
-<br>
-<h2>Ingrese los datos para registrar el Nuevo Usuario</h2>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-12">
+            <h1>Nuevo Usuario</h1><hr>
+            <br>
+            <h2>Ingrese los datos para registrar el Nuevo Usuario</h2>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
 <div class="container">
     <div class="row">   
         <div class="col"></div>

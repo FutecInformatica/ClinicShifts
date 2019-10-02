@@ -1,8 +1,9 @@
+<br><br><br><br>
 <hr>
 <footer class="footer">
     <div class="container">
         <div class="row">			
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="footer_intro">
                     <div class="logo footer_logo">
 			<a href="#">| FUTEC |<span> Futuro Tecnológico</span></a>
