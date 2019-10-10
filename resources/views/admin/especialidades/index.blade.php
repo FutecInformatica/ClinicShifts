@@ -21,10 +21,10 @@
             <td>{{ $esp->name }}</td>
             <td><a href="{{ route('especialidades.edit', $esp->id) }}" 
                    onclick="return confirm('Seguro que deseas editar la Especialidad?')"
-                   class="btn btn-warning">Editar</a>
+                   class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                 <a href="{{ route('especialidades.destroy', $esp->id) }}" 
                    onclick="return confirm('Seguro que deseas eliminar la Especialidad?')"
-                   class="btn btn-danger">Eliminar</a></td>
+                   class="btn btn-danger"><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a></td>
         </tr>
         @endforeach
     </tbody>

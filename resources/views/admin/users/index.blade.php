@@ -37,10 +37,10 @@
             <td>{{ $user->updated_at }}</td>
             <td><a href="{{ route('users.edit', $user->id) }}" 
                    onclick="return confirm('Seguro que deseas editar el Usuario?')"
-                   class="btn btn-warning">Editar</a>
+                   class="btn btn-success"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                 <a href="{{ route('users.destroy', $user->id) }}" 
                    onclick="return confirm('Seguro que deseas eliminar el Usuario?')"
-                   class="btn btn-danger">Eliminar</a></td>
+                   class="btn btn-danger"><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></a></td>
         </tr>
         @endforeach
     </tbody>

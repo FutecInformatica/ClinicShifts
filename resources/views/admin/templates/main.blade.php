@@ -16,6 +16,7 @@
             @yield('content')
         </section>
         <script src="{{ asset('plugins/bootstrap/css/bootstrap.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap3/bootstrap.js') }}"></script>
         <script src="{{ asset('plugins/jquery/js/jquery-3.4.1.js') }}"></script>
         <script src="{{ asset('plugins/jquery/js/jquery-3.3.1.slim.min.js') }}"></script>
         <script src="{{ asset('plugins/ajax/js/popper.min.js') }}"></script>

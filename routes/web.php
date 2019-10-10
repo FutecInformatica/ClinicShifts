@@ -48,3 +48,7 @@ Route::group(['prefix' => 'medicos'], function(){
     Route::resource('medicos','MedicosController');
     
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
